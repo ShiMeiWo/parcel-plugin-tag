@@ -9,6 +9,7 @@ class RiotAsset extends Asset {
 
   async getRiotConfig () {
     const pkg = await this.getPackage()
+    console.log(pkg)
     if (pkg.riot) return pkg.riot
 
     const config = await this.getConfig([ '.riotrc', '.riotrc.js' ])
