@@ -19,6 +19,7 @@ class RiotAsset extends Asset {
 
   async generate () {
     const riotConfig = await this.getRiotConfig()
+    console.log(riotConfig)
 
     const compiled = riot.compile(
       this.contents,
